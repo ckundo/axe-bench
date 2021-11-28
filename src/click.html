@@ -1,0 +1,16 @@
+<!-- <button>Example</button> -->
+<script type="module">
+  import * as bench from '/bench.js';
+  const times = parseInt(new URLSearchParams(document.location.search.substring(1)).get('times'));
+  const button = document.querySelector('button');
+
+  bench.start();
+
+  for (let i = 0; i < times; i++) {
+    const name = computeAccessibleName(button);
+
+    console.log(name);
+  }
+
+  bench.stop();
+</script>

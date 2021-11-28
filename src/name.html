@@ -1,0 +1,13 @@
+<button>Example</button>
+<script type="module">
+  import * as bench from '/bench.js';
+  import { computeAccessibleName } from "dom-accessibility-api";
+
+  const button = document.querySelector('button');
+
+  bench.start();
+
+  computeAccessibleName(button);
+
+  bench.stop();
+</script>

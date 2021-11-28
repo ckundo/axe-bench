@@ -1,0 +1,11 @@
+<button>Example</button>
+<script type="module">
+  import * as bench from '/bench.js';
+  import * as axe from '../node_modules/axe-core/axe.js'
+
+  bench.start();
+
+  await window.axe.run();
+
+  bench.stop();
+</script>

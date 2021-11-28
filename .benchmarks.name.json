@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Polymer/tachometer/master/config.schema.json",
+  "sampleSize": 50,
+  "timeout": 0,
+  "benchmarks": [
+    {
+      "name": "Run name calculation 1 time",
+      "url": "./src/name.html",
+      "browser": {
+        "name": "chrome",
+        "headless": true
+      }
+    }
+  ]
+}

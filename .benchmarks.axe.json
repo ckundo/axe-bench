@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Polymer/tachometer/master/config.schema.json",
+  "sampleSize": 50,
+  "timeout": 0,
+  "benchmarks": [
+    {
+      "name": "Run Axe 1 time",
+      "url": "./src/axe.html",
+      "browser": {
+        "name": "chrome",
+        "headless": true
+      }
+    }
+  ]
+}
