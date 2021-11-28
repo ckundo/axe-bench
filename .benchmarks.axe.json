@@ -4,7 +4,7 @@
   "timeout": 0,
   "benchmarks": [
     {
-      "name": "Run Axe 1 time",
+      "name": "Run axe-core simple",
       "url": "./src/axe.html",
       "browser": {
         "name": "chrome",

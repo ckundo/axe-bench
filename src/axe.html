@@ -1,11 +1,37 @@
-<button>Example</button>
-<script type="module">
-  import * as bench from '/bench.js';
-  import * as axe from '../node_modules/axe-core/axe.js'
+<html lang='en'>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <main>
+  <h1>Sign in</h1>
+  <fieldset>
+    <input type='text' aria-label="name" />
+    <input type='password' aria-label="password" />
+    <input type='submit' />
+  </fieldset>
+  </main>
+  <hr>
 
-  bench.start();
+  <footer>
+    <ul>
+      <li>about</li>
+      <li>jobs</li>
+      <li>contact</li>
+    </ul>
+  </footer>
 
-  await window.axe.run();
+  <script type="module">
+    import * as bench from '/bench.js';
+    import * as axe from '../node_modules/axe-core/axe.js'
 
-  bench.stop();
-</script>
+    bench.start();
+
+    await window.axe.run();
+    await window.axe.run();
+    await window.axe.run();
+
+    bench.stop();
+  </script>
+</body>
+</html>

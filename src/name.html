@@ -1,13 +1,39 @@
-<button>Example</button>
-<script type="module">
-  import * as bench from '/bench.js';
-  import { computeAccessibleName } from "dom-accessibility-api";
+<html lang='en'>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <main>
+  <h1>Sign in</h1>
+  <fieldset>
+    <input type='text' aria-label="name" />
+    <input type='password' aria-label="password" />
+    <input type='submit' />
+  </fieldset>
+  </main>
+  <hr>
 
-  const button = document.querySelector('button');
+  <footer>
+    <ul>
+      <li>about</li>
+      <li>jobs</li>
+      <li>contact</li>
+    </ul>
+  </footer>
 
-  bench.start();
+  <script type="module">
+    import * as bench from '/bench.js';
+    import { computeAccessibleName } from "dom-accessibility-api";
 
-  computeAccessibleName(button);
+    const inputs = document.querySelectorAll('input');
 
-  bench.stop();
-</script>
+    bench.start();
+
+    computeAccessibleName(inputs[0]);
+    computeAccessibleName(inputs[1]);
+    computeAccessibleName(inputs[2]);
+
+    bench.stop();
+  </script>
+</body>
+</html>
